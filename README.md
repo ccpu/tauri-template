@@ -141,7 +141,7 @@ adding secrets to `build.yml`.
 
 ## 🤝 Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## 📄 License
 
