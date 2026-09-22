@@ -4,7 +4,8 @@
   "version": "0.3.0",
   "private": true,
   "exports": {
-    "./base": "./base.js"
+    "./base": "./base.js",
+    "./react": "./react.js"
   },
   "scripts": {
     "clean:all": "git clean -xdf .cache .turbo node_modules",
@@ -15,7 +16,8 @@
     "format:fix": "prettier --write ."
   },
   "dependencies": {
-    "@pixpilot/eslint-config": "^2.18.0"
+    "@pixpilot/eslint-config": "^2.18.0",
+    "@pixpilot/eslint-config-react": "^0.10.0"
   },
   "devDependencies": {
     "@internal/prettier-config": "workspace:*",

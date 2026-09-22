@@ -4,7 +4,6 @@ permissions:
   security-events: write
   actions: read
   contents: read
-  issues: write # Required for pixpilot/codeql-scanner@main
 
 on:
   push:
@@ -27,7 +26,16 @@ on:
 
 jobs:
   codeql-analysis:
+    name: Analyse ${{ matrix.language }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Rust analysis needs the webview toolchain and a full cargo build, so
+        # it is left out. Add `rust` here plus the apt step from ci.yml if you
+        # want the backend scanned too.
+        language:
+          - javascript-typescript
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,29 +43,10 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
+          languages: ${{ matrix.language }}
           config-file: .github/codeql/codeql-config.yml
-
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v3
 
       - name: Run CodeQL Scanner
         uses: github/codeql-action/analyze@v3
-# -------------------------------------------------------------
-# Alternative: pixpilot/codeql-scanner@main
-# -------------------------------------------------------------
-# Use this ONLY if your repo is private and you do NOT have GitHub Enterprise.
-# The official CodeQL workflow (see above) is always preferred for security and
-# integration with GitHub Security UI.
-#
-# jobs:
-#   analyze:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout repository
-#         uses: actions/checkout@v4
-
-#       - name: Run CodeQL Scanner
-#         uses: pixpilot/codeql-scanner@main
-#         with:
-#           token: ${{ secrets.GITHUB_TOKEN }}
-#           config-file: .github/codeql/codeql-config.yml
+        with:
+          category: /language:${{ matrix.language }}

@@ -1,6 +1,8 @@
 name: CodeQL Configuration
 
 paths:
+  - apps/*/src/**/*
+  - apps/*/src-tauri/src/**/*
   - packages/*/src/**/*
 
 paths-ignore:
@@ -10,11 +12,13 @@ paths-ignore:
   - 'tests/**'
   - '**/__tests__/**'
   - '**/*.test.ts'
+  - '**/*.test.tsx'
   - '*.spec.ts'
   - '**/*.min.js'
   - 'dist/**'
   - 'build/**'
   - 'coverage/**'
+  - '**/src-tauri/target/**'
   - '*.md'
   - '*.txt'
   - '*.pdf'

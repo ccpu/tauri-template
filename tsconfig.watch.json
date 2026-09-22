@@ -2,7 +2,12 @@
   "extends": "./tooling/typescript/base.json",
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "baseUrl": ".",
     "allowJs": false,
     "checkJs": false,
@@ -13,14 +18,9 @@
     "node_modules",
     "**/node_modules/**",
     "**/.cache/**",
-    "**/.expo/**",
-    "**/.nest/**",
-    "**/build/**",
-    "**/babel.config.js",
-    "**/metro.config.js",
-    "**/zip.js",
-    "coverage",
     "**/dist/**",
+    "**/src-tauri/target/**",
+    "coverage",
     "**/*.js"
   ]
 }

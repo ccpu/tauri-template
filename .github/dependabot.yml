@@ -24,3 +24,14 @@ updates:
         dependency-type: production
         update-types:
           - patch
+
+  # The Rust backend has its own manifest and lockfile.
+  - package-ecosystem: cargo
+    directory: /apps/desktop/src-tauri
+    schedule:
+      interval: weekly
+    groups:
+      cargo-minor:
+        update-types:
+          - minor
+          - patch

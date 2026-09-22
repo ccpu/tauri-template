@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "exports": {
-    "./base.json": "./base.json"
+    "./base.json": "./base.json",
+    "./app.json": "./app.json"
   },
   "files": [
     "*.json"

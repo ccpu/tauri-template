@@ -4,7 +4,7 @@
     "https://unpkg.com/@pixpilot/scaffoldfy-configs@latest/setup-guard/scaffoldfy.json",
     "https://unpkg.com/@pixpilot/scaffoldfy-configs@latest/workspace-initializer/scaffoldfy.json"
   ],
-  "name": "pnpm-turbo-monorepo-template-setup-local",
+  "name": "tauri-template-setup-local",
   "description": "Runs the shared setup-guard strip, then the shared workspace-initializer, and finally deletes the local setup/ folder.",
   "tasks": [
     {

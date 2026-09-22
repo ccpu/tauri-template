@@ -18,6 +18,9 @@ We welcome all contributions, including bug reports, feature requests, documenta
    pnpm run test
    ```
 
+   If you touched the Rust side, also run `pnpm run rust:fmt`,
+   `pnpm run rust:lint` and `pnpm run rust:test`.
+
 5. **Update documentation** if your change affects usage or public APIs.
 6. **Open a pull request** using the provided template. Be sure to:
    - Clearly describe your change and why it is needed.

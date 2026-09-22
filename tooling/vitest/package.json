@@ -7,13 +7,24 @@
     ".": {
       "types": "./index.d.ts",
       "default": "./index.js"
+    },
+    "./react": {
+      "types": "./react.d.ts",
+      "default": "./react.js"
     }
   },
   "scripts": {
     "clean:all": "git clean -xdf .cache .turbo node_modules",
     "typecheck": "tsc --noEmit",
     "lint": "eslint",
-    "format": "prettier --check . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore"
+    "format": "prettier --check . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
+    "format:fix": "prettier --write . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "catalog:dev",
+    "@testing-library/react": "catalog:dev",
+    "@vitejs/plugin-react": "catalog:dev",
+    "jsdom": "catalog:dev"
   },
   "devDependencies": {
     "@internal/eslint-config": "workspace:*",

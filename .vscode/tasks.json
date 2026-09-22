@@ -1,24 +1,40 @@
 {
   "version": "2.0.0",
   "tasks": [
-    // {
-    //   "type": "shell",
-    //   "label": "tsc:watch",
-    //   "command": "pnpm",
-    //   "args": ["run", "tsc:watch"],
-    //   "group": "build",
-    //   "presentation": {
-    //     "echo": true,
-    //     "reveal": "always",
-    //     "focus": true,
-    //     "panel": "shared",
-    //     "showReuseMessage": true,
-    //     "clear": false
-    //   },
-    //   "isBackground": true,
-    //   "runOptions": {
-    //     "runOn": "folderOpen"
-    //   }
-    // }
+    {
+      // Starts Vite and stays running; the debug configuration waits for the
+      // "ready in" line before it launches the Rust binary against it.
+      "label": "ui:dev",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["dev:web"],
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "vite",
+        "pattern": {
+          "regexp": "^.*$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*VITE.*",
+          "endsPattern": ".*ready in.*"
+        }
+      }
+    },
+    {
+      "label": "ui:build",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["build"],
+      "problemMatcher": []
+    },
+    {
+      "label": "rust:build:debug",
+      "type": "shell",
+      "command": "cargo",
+      "args": ["build", "--manifest-path=apps/desktop/src-tauri/Cargo.toml", "--no-default-features"],
+      "problemMatcher": ["$rustc"],
+      "dependsOn": ["ui:dev"]
+    }
   ]
 }

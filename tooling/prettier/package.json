@@ -1,8 +1,16 @@
 {
   "name": "@internal/prettier-config",
-  "version": "0.0.1",
+  "type": "module",
+  "version": "0.1.0",
   "private": true,
   "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "dependencies": {
+    "prettier-plugin-tailwindcss": "catalog:dev",
+    "tailwindcss": "catalog:prod"
+  },
   "devDependencies": {
     "@internal/tsconfig": "workspace:*",
     "@pixpilot/dev-config": "catalog:dev"

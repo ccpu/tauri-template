@@ -16,7 +16,7 @@ import { dirname, join } from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 
-const TEMPLATE_REPO = 'pnpm-turbo-monorepo-template';
+const TEMPLATE_REPO = 'tauri-template';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const mode = process.argv[2] ?? 'warn';
