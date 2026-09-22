@@ -1,4 +1,4 @@
-# tauri-template
+# Tauri Template
 
 A [Tauri v2](https://v2.tauri.app) desktop application template: a pnpm + Turborepo
 monorepo with a React, TypeScript and Tailwind CSS frontend, a Rust backend, and
