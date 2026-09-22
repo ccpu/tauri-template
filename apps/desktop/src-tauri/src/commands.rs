@@ -5,8 +5,6 @@
 //! the bridge is a string-keyed call, so nothing else will catch a rename.
 
 use serde::Serialize;
-// `package_info` comes from the Manager trait, which has to be in scope.
-use tauri::Manager;
 
 /// Returned by [`app_info`]. Serialised as camelCase to match the TypeScript
 /// interface in `packages/tauri-api/src/types.ts`.
