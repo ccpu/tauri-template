@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ccpu/tauri-template/compare/v1.0.0...v1.0.1) (2026-09-22)
+
+
+### Bug Fixes
+
+* **build:** correct command for building installers ([a5f8805](https://github.com/ccpu/tauri-template/commit/a5f88053eedca3a5a278a094c2575790c1f59a8f))
+
 # 1.0.0 (2026-09-22)
 
 
