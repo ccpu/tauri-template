@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ccpu/tauri-template/compare/v1.0.1...v1.1.0) (2026-09-23)
+
+
+### Features
+
+* **updater:** add in-app update functionality ([89401d3](https://github.com/ccpu/tauri-template/commit/89401d30727c480021134bc1c7a1be2f6aeb3e36))
+
 ## [1.0.1](https://github.com/ccpu/tauri-template/compare/v1.0.0...v1.0.1) (2026-09-22)
 
 
