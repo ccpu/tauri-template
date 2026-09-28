@@ -16,7 +16,7 @@
     "format": "prettier --check . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore"
   },
   "dependencies": {
-    "@pixpilot/tsdown-config": "^0.6.0",
+    "@pixpilot/tsdown-config": "^0.8.3",
     "tsdown": "catalog:dev"
   },
   "devDependencies": {
