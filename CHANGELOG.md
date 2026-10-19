@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/ccpu/tauri-template/compare/v1.1.0...v1.2.0) (2026-10-19)
+
+
+### Bug Fixes
+
+* **tauri.conf:** consolidate endpoints array formatting ([669d4e2](https://github.com/ccpu/tauri-template/commit/669d4e2760352ee2b2bc86f8ec9323edfa610a8f))
+
+
+### Features
+
+* **release:** add shim to skip semantic-release notes push ([da7198e](https://github.com/ccpu/tauri-template/commit/da7198e21e76e21149ec9a59d8387aa9346a944e))
+
 # [1.1.0](https://github.com/ccpu/tauri-template/compare/v1.0.1...v1.1.0) (2026-09-23)
 
 
